@@ -728,6 +728,23 @@
                 >
                 <span id="coupons-help" class="sr-only">请输入10到100000之间的数字</span>
             </div>
+            <div class="input-group">
+                <label for="match-date">
+                    <span lang="zh">选择比赛日期</span>
+                    <span lang="en" style="display:none">Select Match Date</span>
+                </label>
+                <select id="match-date" name="match-date" aria-describedby="date-help"
+                    style="padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: 10px; font-size: 1rem; background: rgba(0,0,0,0.2); color: var(--text-primary); transition: border-color 0.2s, box-shadow 0.2s;">
+                    <option value="june28">2026年6月28日</option>
+                    <option value="june27">2026年6月27日</option>
+                    <option value="june26">2026年6月26日</option>
+                    <option value="june25">2026年6月25日</option>
+                    <option value="june24">2026年6月24日</option>
+                    <option value="june23">2026年6月23日</option>
+                    <option value="all">所有日期</option>
+                </select>
+                <span id="date-help" class="sr-only">选择要预测的比赛日期</span>
+            </div>
             <button class="btn btn-primary" id="predict-btn" type="button">
                 <span>⚽</span>
                 <span lang="zh">生成预测结果</span>
@@ -948,6 +965,38 @@
             '埃及': {
                 macro: { gdp_per_capita: 3500, population: 10900, climate: 0.35, fifa_ranking: 33, host_advantage: 0 },
                 micro: { team_total_value: 12000, max_player_value: 3500, coach_years: 3, avg_age: 27, wc_appearances: 3, recent_form: 0.55, injured_players: 1, total_players: 23, recent_5_games: { wins: 2, draws: 1, losses: 2 }, home_win_rate: 0.50, away_win_rate: 0.35, key_player_health: 1.0, star_player_count: 1, star_player_score: 0.35 }
+            },
+            '克罗地亚': {
+                macro: { gdp_per_capita: 16000, population: 400, climate: 0.7, fifa_ranking: 12, host_advantage: 0 },
+                micro: { team_total_value: 42000, max_player_value: 10000, coach_years: 5, avg_age: 29, wc_appearances: 6, recent_form: 0.65, injured_players: 1, total_players: 23, recent_5_games: { wins: 2, draws: 2, losses: 1 }, home_win_rate: 0.55, away_win_rate: 0.45, key_player_health: 0.95, star_player_count: 2, star_player_score: 0.75 }
+            },
+            '加纳': {
+                macro: { gdp_per_capita: 2000, population: 3100, climate: 0.4, fifa_ranking: 52, host_advantage: 0 },
+                micro: { team_total_value: 12000, max_player_value: 4000, coach_years: 2, avg_age: 26, wc_appearances: 4, recent_form: 0.55, injured_players: 2, total_players: 23, recent_5_games: { wins: 2, draws: 1, losses: 2 }, home_win_rate: 0.50, away_win_rate: 0.35, key_player_health: 0.9, star_player_count: 1, star_player_score: 0.4 }
+            },
+            '巴拿马': {
+                macro: { gdp_per_capita: 12000, population: 420, climate: 0.5, fifa_ranking: 61, host_advantage: 0 },
+                micro: { team_total_value: 6000, max_player_value: 1500, coach_years: 3, avg_age: 28, wc_appearances: 2, recent_form: 0.5, injured_players: 1, total_players: 23, recent_5_games: { wins: 1, draws: 2, losses: 2 }, home_win_rate: 0.45, away_win_rate: 0.30, key_player_health: 1.0, star_player_count: 0, star_player_score: 0.2 }
+            },
+            '英格兰': {
+                macro: { gdp_per_capita: 46000, population: 5600, climate: 0.65, fifa_ranking: 4, host_advantage: 0 },
+                micro: { team_total_value: 80000, max_player_value: 18000, coach_years: 4, avg_age: 26, wc_appearances: 15, recent_form: 0.75, injured_players: 1, total_players: 23, recent_5_games: { wins: 3, draws: 1, losses: 1 }, home_win_rate: 0.65, away_win_rate: 0.55, key_player_health: 1.0, star_player_count: 4, star_player_score: 0.9 }
+            },
+            '哥伦比亚': {
+                macro: { gdp_per_capita: 7000, population: 5000, climate: 0.65, fifa_ranking: 18, host_advantage: 0 },
+                micro: { team_total_value: 35000, max_player_value: 8000, coach_years: 3, avg_age: 27, wc_appearances: 6, recent_form: 0.65, injured_players: 1, total_players: 23, recent_5_games: { wins: 2, draws: 2, losses: 1 }, home_win_rate: 0.55, away_win_rate: 0.45, key_player_health: 0.95, star_player_count: 2, star_player_score: 0.65 }
+            },
+            '葡萄牙': {
+                macro: { gdp_per_capita: 22000, population: 1050, climate: 0.75, fifa_ranking: 9, host_advantage: 0 },
+                micro: { team_total_value: 55000, max_player_value: 15000, coach_years: 5, avg_age: 27, wc_appearances: 7, recent_form: 0.7, injured_players: 1, total_players: 23, recent_5_games: { wins: 3, draws: 1, losses: 1 }, home_win_rate: 0.60, away_win_rate: 0.50, key_player_health: 1.0, star_player_count: 2, star_player_score: 0.85 }
+            },
+            '刚果': {
+                macro: { gdp_per_capita: 500, population: 5500, climate: 0.35, fifa_ranking: 93, host_advantage: 0 },
+                micro: { team_total_value: 3000, max_player_value: 800, coach_years: 2, avg_age: 26, wc_appearances: 2, recent_form: 0.45, injured_players: 2, total_players: 23, recent_5_games: { wins: 1, draws: 1, losses: 3 }, home_win_rate: 0.40, away_win_rate: 0.25, key_player_health: 0.9, star_player_count: 0, star_player_score: 0.15 }
+            },
+            '乌兹别克斯坦': {
+                macro: { gdp_per_capita: 2500, population: 3400, climate: 0.5, fifa_ranking: 78, host_advantage: 0 },
+                micro: { team_total_value: 8000, max_player_value: 1500, coach_years: 3, avg_age: 27, wc_appearances: 1, recent_form: 0.5, injured_players: 1, total_players: 23, recent_5_games: { wins: 1, draws: 2, losses: 2 }, home_win_rate: 0.45, away_win_rate: 0.30, key_player_health: 1.0, star_player_count: 0, star_player_score: 0.2 }
             }
         };
 
@@ -957,6 +1006,63 @@
             { match_id: 'M39', date: '2026-06-23', time: '09:00', team1: '挪威', team2: '塞内加尔', group: 'B' },
             { match_id: 'M40', date: '2026-06-23', time: '09:00', team1: '约旦', team2: '阿尔及利亚', group: 'E' }
         ];
+
+        const MATCHES_JUNE_24 = [
+            { match_id: 'M41', date: '2026-06-24', time: '03:00', team1: '阿根廷', team2: '奥地利', group: 'D' },
+            { match_id: 'M42', date: '2026-06-24', time: '06:00', team1: '法国', team2: '伊拉克', group: 'A' },
+            { match_id: 'M43', date: '2026-06-24', time: '09:00', team1: '挪威', team2: '塞内加尔', group: 'B' },
+            { match_id: 'M44', date: '2026-06-24', time: '12:00', team1: '约旦', team2: '阿尔及利亚', group: 'E' },
+            { match_id: 'M45', date: '2026-06-24', time: '15:00', team1: '西班牙', team2: '沙特阿拉伯', group: 'C' },
+            { match_id: 'M46', date: '2026-06-24', time: '18:00', team1: '比利时', team2: '伊朗', group: 'F' },
+            { match_id: 'M47', date: '2026-06-24', time: '21:00', team1: '乌拉圭', team2: '佛得角', group: 'B' },
+            { match_id: 'M48', date: '2026-06-24', time: '21:00', team1: '新西兰', team2: '埃及', group: 'E' }
+        ];
+
+        const MATCHES_JUNE_25 = [
+            { match_id: 'M49', date: '2026-06-25', time: '03:00', team1: '阿根廷', team2: '约旦', group: 'D' },
+            { match_id: 'M50', date: '2026-06-25', time: '06:00', team1: '法国', team2: '挪威', group: 'A' },
+            { match_id: 'M51', date: '2026-06-25', time: '09:00', team1: '西班牙', team2: '沙特阿拉伯', group: 'C' },
+            { match_id: 'M52', date: '2026-06-25', time: '12:00', team1: '比利时', team2: '伊朗', group: 'E' },
+            { match_id: 'M53', date: '2026-06-25', time: '15:00', team1: '乌拉圭', team2: '佛得角', group: 'B' },
+            { match_id: 'M54', date: '2026-06-25', time: '18:00', team1: '塞内加尔', team2: '新西兰', group: 'F' },
+        ];
+
+        const MATCHES_JUNE_26 = [
+            { match_id: 'M55', date: '2026-06-26', time: '03:00', team1: '阿尔及利亚', team2: '法国', group: 'A' },
+            { match_id: 'M56', date: '2026-06-26', time: '06:00', team1: '阿根廷', team2: '澳大利亚', group: 'D' },
+            { match_id: 'M57', date: '2026-06-26', time: '09:00', team1: '西班牙', team2: '美国', group: 'C' },
+            { match_id: 'M58', date: '2026-06-26', time: '12:00', team1: '比利时', team2: '日本', group: 'E' },
+            { match_id: 'M59', date: '2026-06-26', time: '15:00', team1: '乌拉圭', team2: '韩国', group: 'B' },
+            { match_id: 'M60', date: '2026-06-26', time: '18:00', team1: '塞内加尔', team2: '摩洛哥', group: 'F' },
+        ];
+
+        const MATCHES_JUNE_27 = [
+            { match_id: 'M61', date: '2026-06-27', time: '03:00', team1: '塞内加尔', team2: '伊拉克', group: 'A' },
+            { match_id: 'M62', date: '2026-06-27', time: '06:00', team1: '挪威', team2: '法国', group: 'D' },
+            { match_id: 'M63', date: '2026-06-27', time: '09:00', team1: '佛得角', team2: '沙特阿拉伯', group: 'C' },
+            { match_id: 'M64', date: '2026-06-27', time: '12:00', team1: '乌拉圭', team2: '西班牙', group: 'E' },
+            { match_id: 'M65', date: '2026-06-27', time: '15:00', team1: '埃及', team2: '伊朗', group: 'B' },
+            { match_id: 'M66', date: '2026-06-27', time: '18:00', team1: '新西兰', team2: '比利时', group: 'F' },
+        ];
+
+        const MATCHES_JUNE_28 = [
+            { match_id: 'M67', date: '2026-06-28', time: '03:00', team1: '克罗地亚', team2: '加纳', group: 'B' },
+            { match_id: 'M68', date: '2026-06-28', time: '06:00', team1: '巴拿马', team2: '英格兰', group: 'D' },
+            { match_id: 'M69', date: '2026-06-28', time: '09:00', team1: '哥伦比亚', team2: '葡萄牙', group: 'C' },
+            { match_id: 'M70', date: '2026-06-28', time: '12:00', team1: '刚果', team2: '乌兹别克斯坦', group: 'E' },
+            { match_id: 'M71', date: '2026-06-28', time: '15:00', team1: '阿尔及利亚', team2: '奥地利', group: 'A' },
+            { match_id: 'M72', date: '2026-06-28', time: '18:00', team1: '约旦', team2: '阿根廷', group: 'F' },
+        ];
+
+        const MATCHES_BY_DATE = {
+            june23: MATCHES_JUNE_23,
+            june24: MATCHES_JUNE_24,
+            june25: MATCHES_JUNE_25,
+            june26: MATCHES_JUNE_26,
+            june27: MATCHES_JUNE_27,
+            june28: MATCHES_JUNE_28,
+            all: [...MATCHES_JUNE_23, ...MATCHES_JUNE_24, ...MATCHES_JUNE_25, ...MATCHES_JUNE_26, ...MATCHES_JUNE_27, ...MATCHES_JUNE_28]
+        };
 
         class SimplePredictor {
             predictWinProbability(team1Score, team2Score) {
@@ -1094,10 +1200,11 @@
         const predictor = new SimplePredictor();
         const featureExtractor = new FeatureExtractor();
 
-        function generateMatchPredictions() {
+        function generateMatchPredictions(dateKey = 'june28') {
             const predictions = [];
+            const matches = MATCHES_BY_DATE[dateKey] || MATCHES_BY_DATE['june28'];
 
-            MATCHES_JUNE_23.forEach(match => {
+            matches.forEach(match => {
                 const team1Score = featureExtractor.getTeamScore(match.team1);
                 const team2Score = featureExtractor.getTeamScore(match.team2);
 
@@ -1178,6 +1285,8 @@
 
         function handlePredict() {
             const coupons = parseInt(couponsInput.value);
+            const dateSelect = document.getElementById('match-date');
+            const selectedDate = dateSelect ? dateSelect.value : 'june28';
 
             if (isNaN(coupons) || coupons < 10) {
                 showError(getText('请输入有效的应援券数量（最少10）', 'Please enter valid tickets (minimum 10)'));
@@ -1197,7 +1306,7 @@
             predictBtn.disabled = true;
 
             setTimeout(() => {
-                let predictions = generateMatchPredictions();
+                let predictions = generateMatchPredictions(selectedDate);
                 predictions = calculateBetRatios(predictions);
                 displayPredictions(predictions, coupons);
 
@@ -1307,19 +1416,35 @@
                 timestamp: new Date().toISOString()
             };
 
-            try {
-                const existingFeedbacks = localStorage.getItem('worldcup_feedbacks') || '[]';
-                const feedbacks = JSON.parse(existingFeedbacks);
-                feedbacks.push(feedbackData);
-                localStorage.setItem('worldcup_feedbacks', JSON.stringify(feedbacks));
-
-                hideError();
-                showSuccess(getText('反馈提交成功！感谢您的意见', 'Feedback submitted successfully! Thank you for your input'));
+            fetch('/api/feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name, content: content })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    hideError();
+                    showSuccess(getText('反馈提交成功！感谢您的意见', 'Feedback submitted successfully! Thank you for your input'));
+                    feedbackForm.reset();
+                } else {
+                    showError(getText('提交失败：' + (data.error || '未知错误'), 'Submission failed: ' + (data.error || 'Unknown error')));
+                }
+            })
+            .catch(error => {
+                try {
+                    const existingFeedbacks = localStorage.getItem('worldcup_feedbacks') || '[]';
+                    const feedbacks = JSON.parse(existingFeedbacks);
+                    feedbacks.push(feedbackData);
+                    localStorage.setItem('worldcup_feedbacks', JSON.stringify(feedbacks));
+                    showSuccess(getText('反馈已本地记录！感谢您的意见', 'Feedback recorded locally! Thank you for your input'));
+                } catch (e) {
+                    showSuccess(getText('反馈已记录！感谢您的意见', 'Feedback recorded! Thank you for your input'));
+                }
                 feedbackForm.reset();
-            } catch (e) {
-                showSuccess(getText('反馈已记录！感谢您的意见', 'Feedback recorded! Thank you for your input'));
-                feedbackForm.reset();
-            }
+            });
         }
 
         function showError(message) {
